@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fire-template-cb8b2": {
+      "hosting": {
+        "fire-dashboard-template": [
+          "fire-template-cb8b2"
+        ]
+      }
+    }
+  }
+}
