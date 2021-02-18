@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,14 +14,7 @@ import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
     AppRoutingModule,
     BrowserAnimationsModule,
     NgxAuthFirebaseUIModule.forRoot(
-      {
-        apiKey: 'your-firebase-apiKey',
-        authDomain: 'your-firebase-authDomain',
-        databaseURL: 'your-firebase-databaseURL',
-        projectId: 'your-firebase-projectId',
-        storageBucket: 'your-firebase-storageBucket',
-        messagingSenderId: 'your-firebase-messagingSenderId',
-      },
+      environment.firebaseConfig,
       () => 'fire-template',
       {
         enableFirestoreSync: true, // enable/disable autosync users with firestore
@@ -40,9 +34,9 @@ import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
         // If set to true outputs the UserCredential object instead of firebase.User after login and signup - Default: false
         useRawUserCredential: true
       }
-    ),
+    )
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
