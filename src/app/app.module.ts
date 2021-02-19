@@ -18,9 +18,11 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { NavigationComponent } from './navigation/navigation.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatListModule } from '@angular/material/list';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, HeaderComponent, NavigationComponent],
+  declarations: [AppComponent, DashboardComponent, HeaderComponent, NavigationComponent, LoginComponent, RegisterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -33,8 +35,8 @@ import { MatListModule } from '@angular/material/list';
         enableFirestoreSync: true, // enable/disable autosync users with firestore
         toastMessageOnAuthSuccess: false, // whether to open/show a snackbar message on auth success - default : true
         toastMessageOnAuthError: false, // whether to open/show a snackbar message on auth error - default : true
-        authGuardFallbackURL: '/loggedout', // url for unauthenticated users - to use in combination with canActivate feature on a route
-        authGuardLoggedInURL: '/loggedin', // url for authenticated users - to use in combination with canActivate feature on a route
+        authGuardFallbackURL: '/login', // url for unauthenticated users - to use in combination with canActivate feature on a route
+        authGuardLoggedInURL: '/dashboard', // url for authenticated users - to use in combination with canActivate feature on a route
         passwordMaxLength: 60, // `min/max` input parameters in components should be within this range.
         passwordMinLength: 8, // Password length min/max in forms independently of each componenet min/max.
         // Same as password but for the name
