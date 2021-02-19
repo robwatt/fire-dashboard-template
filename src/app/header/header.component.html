@@ -4,8 +4,8 @@
     </div>
     <div fxFlex></div>
     <div fxFlex="nogrow">
-      <button mat-button color="secondary" (click)="logout()">Logout</button>
-      <ngx-auth-firebaseui-avatar></ngx-auth-firebaseui-avatar>
+      <button mat-button color="secondary" (click)="logout()">Sign Out</button>
+      <ngx-auth-firebaseui-avatar (onSignOut)="logout()"></ngx-auth-firebaseui-avatar>
     </div>
   </mat-toolbar>
   
