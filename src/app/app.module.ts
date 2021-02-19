@@ -20,6 +20,9 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatListModule } from '@angular/material/list';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [AppComponent, DashboardComponent, HeaderComponent, NavigationComponent, LoginComponent, RegisterComponent],
@@ -58,7 +61,10 @@ import { RegisterComponent } from './register/register.component';
     MatFormFieldModule,
     MatInputModule,
     LayoutModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
